@@ -35,10 +35,7 @@ public class DataService {
 		
 		csvTransfer.setCsvList(cb.parse());
 		reader.close();
-		
-		System.out.println();
-		
+
 		return csvTransfer.getCsvList();
 	}
-	
 }

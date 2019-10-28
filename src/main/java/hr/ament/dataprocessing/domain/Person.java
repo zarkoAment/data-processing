@@ -8,6 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import com.opencsv.bean.CsvDate;
 import lombok.Data;
 
 @Entity
@@ -27,12 +29,12 @@ public class Person {
 	@CsvBindByName(column = "Prezime")
 	@Column (name = "PERSON_SURNAME", length = 100)
 	private String surname;
-	
+
+	@CsvDate(value = "yyyy-MM-dd")
 	@CsvBindByName(column = "DatumRodjenja")
 	@Column (name = "PERSON_DATE_OF_BIRTH")
 	private Date dateOfBirth;
-	
-	
+
 	public Person(){
 	
 	}
